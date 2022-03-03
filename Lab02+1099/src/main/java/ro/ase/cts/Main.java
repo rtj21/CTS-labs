@@ -1,7 +1,7 @@
-package ro.ase.cts.g1099.lab1;
+package ro.ase.cts;
 
-import ro.ase.cts.g1099.lab1.exceptions.InsufficientFundsException;
-import ro.ase.cts.g1099.lab1.interfaces.IProfitable;
+import ro.ase.cts.exceptions.InsufficientFundsException;
+import ro.ase.cts.interfaces.IProfitable;
 
 public class Main {
     public static void main(String[] args) {
