@@ -1,7 +1,7 @@
 package ro.ase.cts.g1099.cleancode.stage3;
 
 public enum ProductType {
-    NEW(1, 0), DISCOUNT(2, 0.15f), SALES(3, 0.25f), FINAL_SALES(3, 0.35f);
+    NEW(1, 0), DISCOUNT(2, 0.15f), SALES(3, 0.25f), FINAL_SALES(4, 0.35f);
 
     int id;
     float discountValue;
