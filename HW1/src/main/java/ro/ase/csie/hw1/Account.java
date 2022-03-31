@@ -1,11 +1,12 @@
 package ro.ase.csie.hw1;
 
 public class Account {
-    public static final int STANDARD = 0, BUDGET = 1, PREMIUM = 2, SUPER_PREMIUM = 3;
-    public double loanValue, rate;
-    public int daysActive, accountType;
 
-    public Account(double loanValue, double rate, int accountType) throws Exception {
+    public double loanValue, rate;
+    public int daysActive;
+    AccountType accountType;
+
+    public Account(double loanValue, double rate, AccountType accountType) throws Exception {
         if (loanValue < 0)
             throw new Exception();
         else {
@@ -21,7 +22,7 @@ public class Account {
         int temp = 365;
         for (int i = 0; i < accounts.length; i++) {
             account = accounts[i];
-            if (account.accountType == Account.PREMIUM || account.accountType == Account.SUPER_PREMIUM)
+            if (account.accountType == AccountType.PREMIUM || account.accountType == AccountType.SUPER_PREMIUM)
                 totalFee += .0125 * (    //	1.25%	broker's	fee
                         account.loanValue * Math.pow(account.rate, (account.daysActive / 365)) - account.loanValue);    //	interest-principal
         }
