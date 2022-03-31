@@ -1,6 +1,6 @@
 package ro.ase.csie.hw1;
 
-public class Account {
+public class Account implements IAccountable {
 
     public double loanValue, rate;
     public int daysActive;
@@ -41,7 +41,7 @@ public class Account {
         return this.rate;
     }
 
-    //must have method - the lead has requested it in all classes
+    @Override
     public double getMonthlyRate() {
         return loanValue * rate;
     }
