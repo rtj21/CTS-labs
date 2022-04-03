@@ -18,17 +18,18 @@ public class Account implements IAccountable {
         this.accountType = accountType;
     }
 
-    public static double computeTotalFee(Account[] accounts) {
+    public static double computeAccountsTotalFee(Account[] accounts) {
         double totalFee = 0.0;
-        Account account;
 
-        for (int i = 0; i < accounts.length; i++) {
-            account = accounts[i];
+        for (Account account : accounts) {
             if (account.accountType == AccountType.PREMIUM || account.accountType == AccountType.SUPER_PREMIUM)
-                totalFee += BROKER_FEE * (account.loanValue * Math.pow(account.rate, (account.daysActive / DAYS_IN_YEAR))
-                        - account.loanValue);    //	interest-principal
+                totalFee += account.computeFee();
         }
         return totalFee;
+    }
+
+    public double computeFee(){
+        return (BROKER_FEE * this.loanValue * (Math.pow(this.rate, (this.daysActive / DAYS_IN_YEAR)) - 1));
     }
 
     public double getLoanValue() {
