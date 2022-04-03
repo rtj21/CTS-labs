@@ -1,4 +1,4 @@
-package ro.ase.csie.hw1;
+package ro.ase.csie.hw1.models;
 
 public enum AccountType {
 

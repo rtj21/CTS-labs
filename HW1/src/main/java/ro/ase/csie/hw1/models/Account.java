@@ -1,4 +1,7 @@
-package ro.ase.csie.hw1;
+package ro.ase.csie.hw1.models;
+
+import ro.ase.csie.hw1.Exceptions.InvalidLoanValueException;
+import ro.ase.csie.hw1.interfaces.IAccountable;
 
 public class Account implements IAccountable {
 
