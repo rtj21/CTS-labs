@@ -10,7 +10,7 @@ public class Account implements IAccountable {
 
     public Account(double loanValue, double rate, AccountType accountType) throws Exception {
         if (loanValue < 0)
-            throw new Exception();
+            throw new InvalidLoanValueException();
 
         this.loanValue = loanValue;
         this.rate = rate;
@@ -48,7 +48,7 @@ public class Account implements IAccountable {
 
     public void setLoanValue(double loanValue) throws Exception {
         if (loanValue < 0)
-            throw new Exception();
+            throw new InvalidLoanValueException();
 
         this.loanValue = loanValue;
     }
