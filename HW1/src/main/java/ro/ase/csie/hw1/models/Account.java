@@ -3,13 +3,14 @@ package ro.ase.csie.hw1.models;
 import ro.ase.csie.hw1.Exceptions.InvalidLoanValueException;
 import ro.ase.csie.hw1.interfaces.IAccountable;
 
-public class Account implements IAccountable {
+public class Account  {
+
+
 
     public double loanValue, rate;
     public int daysActive;
     AccountType accountType;
-    private static float BROKER_FEE = 0.0125f;
-    public static float DAYS_IN_YEAR = 365;
+    AccountComputing accountComputing;
 
     public Account(double loanValue, double rate, AccountType accountType) throws Exception {
         if (loanValue < 0)
@@ -24,15 +25,13 @@ public class Account implements IAccountable {
         double totalFee = 0.0;
 
         for (Account account : accounts) {
-            if (account.accountType == AccountType.PREMIUM || account.accountType == AccountType.SUPER_PREMIUM)
-                totalFee += account.computeFee();
+            if (account.accountType.hasFees())
+                totalFee += account.accountComputing.computeFee(account.loanValue, account.rate, account.daysActive);
         }
         return totalFee;
     }
 
-    public double computeFee(){
-        return (BROKER_FEE * this.loanValue * (Math.pow(this.rate, (this.daysActive / DAYS_IN_YEAR)) - 1));
-    }
+
 
     public double getLoanValue() {
         System.out.println("The loan value is " + this.loanValue);
@@ -44,10 +43,6 @@ public class Account implements IAccountable {
         return this.rate;
     }
 
-    @Override
-    public double getMonthlyRate() {
-        return loanValue * rate;
-    }
 
     public void setLoanValue(double loanValue) throws Exception {
         if (loanValue < 0)
@@ -61,6 +56,7 @@ public class Account implements IAccountable {
         return "Loan: " + this.loanValue + "; rate: " + this.rate +
                 "; days active:" + daysActive + "; Type: " + accountType + ";";
     }
+
 
     public void printAccount() {
         System.out.println("This is an account");
