@@ -1,0 +1,14 @@
+-mixed formatting rules (camelCase and snake_case) : formatting
+-random spaces and indents (the calculate method just physically hurts my eyes to read :') ) : formatting
+-comments that would otherwise be useless if we had proper variables : formatting
+-unnecessary if/else blocks : formatting
+-multiple variables that could be replaced by an enum : formatting
+
+-some names are way too generic (setValue, temp, calculate,vb) : meaningful names
+-lots of 'magic numbers' : meaningful names
+
+-functions are not atomic (calculate does everything) / does not do one thing : functions
+-functions are not short : functions
+
+-the class has multiple responsibilities : SRS
+-new functionalities would need to modify the code, not open closed : open closed principle
