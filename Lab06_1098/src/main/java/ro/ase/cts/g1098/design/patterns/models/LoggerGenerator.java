@@ -19,5 +19,6 @@ public class LoggerGenerator {
                 e.printStackTrace();
             }
         }
+        return logger;
     }
 }
