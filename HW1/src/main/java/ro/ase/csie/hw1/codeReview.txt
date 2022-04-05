@@ -14,4 +14,4 @@
 -new functionalities would need to modify the code, not open closed : open closed principle
 
 -generic exceptions : Do one thing
--WET functions : DRY
+-WET functions (useless print functions) : DRY
