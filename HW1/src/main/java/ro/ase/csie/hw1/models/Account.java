@@ -5,12 +5,10 @@ import ro.ase.csie.hw1.interfaces.IAccountable;
 
 public class Account  {
 
-
-
-    public double loanValue, rate;
-    public int daysActive;
-    AccountType accountType;
-    AccountComputing accountComputing;
+    private double loanValue, rate;
+    private int daysActive;
+    private AccountType accountType;
+    private AccountComputing accountComputing;
 
     public Account(double loanValue, double rate, AccountType accountType) throws Exception {
         if (loanValue < 0)

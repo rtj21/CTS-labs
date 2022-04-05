@@ -4,7 +4,7 @@ import ro.ase.csie.hw1.interfaces.IAccountable;
 
 public class AccountComputing implements IAccountable {
     private static final float BROKER_FEE = 0.0125f;
-    public static float DAYS_IN_YEAR = 365;
+    private static float DAYS_IN_YEAR = 365;
 
     @Override
     public double getMonthlyRate(int loanValue, int rate) {
