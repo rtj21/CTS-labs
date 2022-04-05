@@ -67,18 +67,6 @@ public class Account {
         this.loanValue = loanValue;
     }
 
-    public void printRateValue() {
-        System.out.println("The rate is " + rate);
-    }
-
-    public void printLoanValue() {
-        System.out.println("The loan value is " + this.loanValue);
-    }
-    
-    public void printAccount() {
-        System.out.println("This is an account");
-    }
-
     @Override
     public String toString() {
         return "Loan: " + this.loanValue + "; rate: " + this.rate +
