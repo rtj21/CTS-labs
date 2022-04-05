@@ -47,11 +47,11 @@ public class Account {
         this.accountType = accountType;
     }
 
-    public IAccountable getiAccountable() {
+    public IAccountable getIAccountable() {
         return iAccountable;
     }
 
-    public void setiAccountable(IAccountable iAccountable) {
+    public void setIAccountable(IAccountable iAccountable) {
         this.iAccountable = iAccountable;
     }
 

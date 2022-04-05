@@ -16,6 +16,7 @@ public class Broker {
     }
 
     public double computeFee(Account account){
-        return (this.brokerFee * account.getLoanValue() * (Math.pow(account.getRate(), (account.getDaysActive() / DAYS_IN_YEAR)) - 1));
+        return (this.brokerFee * account.getLoanValue() *
+                (Math.pow(account.getRate(), (account.getDaysActive() / DAYS_IN_YEAR)) - 1));
     }
 }
