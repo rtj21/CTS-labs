@@ -1,9 +1,7 @@
-package TicuJianu.Robert.g1100;
+package TicuJianu.Robert.g1100.Singleton;
 
-import TicuJianu.Robert.g1100.Singleton.SnykAppType;
-import TicuJianu.Robert.g1100.Singleton.SnykConnection;
 
-public class Main {
+public class TestSingleton {
     public static void main(String[] args) {
         SnykConnection snykConnection = SnykConnection.getConnection();
         snykConnection.appType = SnykAppType.Cpp;
