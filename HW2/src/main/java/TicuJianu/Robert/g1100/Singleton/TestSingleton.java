@@ -2,7 +2,7 @@ package TicuJianu.Robert.g1100.Singleton;
 
 
 public class TestSingleton {
-    public static void main(String[] args) {
+    public void test(){
         SnykConnection snykConnection = SnykConnection.getConnection();
         snykConnection.appType = SnykAppType.Cpp;
         snykConnection.testApp();
