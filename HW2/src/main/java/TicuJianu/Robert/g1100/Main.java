@@ -1,15 +1,15 @@
 package TicuJianu.Robert.g1100;
 
-import TicuJianu.Robert.g1100.Adapter.TestAdapter;
-import TicuJianu.Robert.g1100.Builder.TestBuilder;
-import TicuJianu.Robert.g1100.Composite.TestComposite;
-import TicuJianu.Robert.g1100.Decorator.TestDecorator;
+import TicuJianu.Robert.g1100.Adapter.Models.TestAdapter;
+import TicuJianu.Robert.g1100.Builder.Models.TestBuilder;
+import TicuJianu.Robert.g1100.Composite.Models.TestComposite;
+import TicuJianu.Robert.g1100.Decorator.Models.TestDecorator;
 import TicuJianu.Robert.g1100.Facade.TestAssignment;
-import TicuJianu.Robert.g1100.Factory.TestFactory;
-import TicuJianu.Robert.g1100.Flyweight.TestFlyweight;
-import TicuJianu.Robert.g1100.Prototype.TestPrototype;
-import TicuJianu.Robert.g1100.Proxy.TestProxy;
-import TicuJianu.Robert.g1100.Singleton.TestSingleton;
+import TicuJianu.Robert.g1100.Factory.Models.TestFactory;
+import TicuJianu.Robert.g1100.Flyweight.Models.TestFlyweight;
+import TicuJianu.Robert.g1100.Prototype.Models.TestPrototype;
+import TicuJianu.Robert.g1100.Proxy.Models.TestProxy;
+import TicuJianu.Robert.g1100.Singleton.Models.TestSingleton;
 
 public class Main {
     public static void main(String[] args) {
